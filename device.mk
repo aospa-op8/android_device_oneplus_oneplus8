@@ -67,9 +67,6 @@ PRODUCT_PACKAGES += fs_config_files
 # FM
 BOARD_HAVE_QCOM_FM := false
 
-# GSI
-$(call inherit-product, build/make/target/product/gsi_keys.mk)
-
 # Init
 PRODUCT_COPY_FILES += $(DEVICE_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
 PRODUCT_PACKAGES += \
