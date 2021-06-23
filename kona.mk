@@ -38,6 +38,9 @@ SHIPPING_API_LEVEL := 30
 
 PRODUCT_SHIPPING_API_LEVEL := $(SHIPPING_API_LEVEL)
 
+BOARD_SHIPPING_API_LEVEL := 30
+BOARD_API_LEVEL := 30
+
 #####Dynamic partition Handling
 BOARD_DYNAMIC_PARTITION_ENABLE ?= true
 PRODUCT_BUILD_ODM_IMAGE := true
@@ -67,6 +70,12 @@ TARGET_DISABLE_DISPLAY := false
 
 # Enable incremental FS feature
 PRODUCT_PROPERTY_OVERRIDES += ro.incremental.enable=1
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.soc.manufacturer=QTI
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.soc.model=SM8250
 
 # privapp-permissions whitelisting (To Fix CTS :privappPermissionsMustBeEnforced)
 PRODUCT_PROPERTY_OVERRIDES += ro.control_privapp_permissions=enforce
